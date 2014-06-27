@@ -1,0 +1,7 @@
+## Interface: 50400
+## Title: |cff0099CCrain|rTankAbsorb
+## Author: Rainrider
+## Notes: Displays the amount of tank absorbs
+## Version: 1.0
+
+rainTankAbsorb.lua
