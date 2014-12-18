@@ -1,6 +1,7 @@
 local addon, ns = ...
 
 local borderTex = [=[Interface\AddOns\rainTankAbsorb\media\textures\buttonnormal]=]
+ns.borderTex = borderTex
 
 local AbsorbSpell = {
 	DEATHKNIGHT =  77535,	-- Blood Shield
@@ -26,8 +27,15 @@ local SiValue = function(value)
 		return value
 	end
 end
+ns.SiValue = SiValue
 
-local tracker = CreateFrame("Frame", addon, UIParent)
+local Debug = function() end
+if (AdiDebug) then
+	Debug = AdiDebug:Embed({}, addon)
+end
+ns.Debug = Debug
+
+local tracker = CreateFrame("Frame", nil, UIParent)
 tracker:SetSize(40, 40)
 tracker:SetPoint("CENTER", UIParent, "CENTER", -400, -100)
 tracker:Hide()
@@ -42,7 +50,7 @@ shieldText:SetPoint("TOP", tracker, "BOTTOM", 0, -10)
 local apText = UIParent:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Large")
 apText:SetPoint("BOTTOM", tracker, "TOP", 0, 10)
 
-local cd = CreateFrame("Cooldown", addon.."_CD", tracker)
+local cd = CreateFrame("Cooldown", nil, tracker)
 cd:SetAllPoints()
 cd:SetReverse(true)
 

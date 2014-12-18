@@ -3,5 +3,8 @@
 ## Author: Rainrider
 ## Notes: Displays the amount of tank absorbs
 ## Version: 1.0
+## OptionalDeps: AdiDebug
+## SavedVariables: rainTankAbsorbDB
 
 rainTankAbsorb.lua
+statue.lua
