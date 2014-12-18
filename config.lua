@@ -1,0 +1,3 @@
+local addon, ns = ...
+
+ns.borderTex = [=[Interface\AddOns\rainTankAbsorb\media\textures\buttonnormal]=]

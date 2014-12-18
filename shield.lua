@@ -1,8 +1,5 @@
 local addon, ns = ...
 
-local borderTex = [=[Interface\AddOns\rainTankAbsorb\media\textures\buttonnormal]=]
-ns.borderTex = borderTex
-
 local AbsorbSpell = {
 	DEATHKNIGHT =  77535,	-- Blood Shield
 	       MONK = 115295,	-- Guard
@@ -57,7 +54,7 @@ cd:SetReverse(true)
 local border = cd:CreateTexture(nil, "OVERLAY")
 border:SetPoint("TOPLEFT", tracker, "TOPLEFT", -4, 4)
 border:SetPoint("BOTTOMRIGHT", tracker, "BOTTOMRIGHT", 4, -4)
-border:SetTexture(borderTex)
+border:SetTexture(ns.borderTex)
 
 tracker:RegisterEvent("PLAYER_ENTERING_WORLD")
 tracker:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")

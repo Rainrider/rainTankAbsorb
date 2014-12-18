@@ -6,5 +6,6 @@
 ## OptionalDeps: AdiDebug
 ## SavedVariables: rainTankAbsorbDB
 
-rainTankAbsorb.lua
+config.lua
+shield.lua
 statue.lua
